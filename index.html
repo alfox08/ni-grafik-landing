@@ -4,24 +4,36 @@
   <meta charset="utf-8">
   <title>Переход в Telegram…</title>
 
-  <!-- Мгновенный редирект -->
-  <meta http-equiv="refresh" content="0;URL='https://t.me/neinvestor_grafikznaet'">
-
-  <!-- Код Яндекс.Метрики (счётчик 103360033) -->
-  <script type="text/javascript">
+  <!-- 1) Яндекс.Метрика -->
+  <script>
     (function(m,e,t,r,i,k,a){ m[i]=m[i]||function(){(m[i].a=m[i].a||[])
-    .push(arguments)}; m[i].l=1*new Date(); k=e.createElement(t),
-    a=e.getElementsByTagName(t)[0]; k.async=1; k.src=r; a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      .push(arguments)}; m[i].l=1*new Date();
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+      k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-    ym(103360033, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true
-    });
+    ym(103360033,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});
+
+    /* хит цели */
+    ym(103360033,'hit','/?goal=join_tg');
+
+    /* редирект через 300-400 мс */
+    setTimeout(function(){
+      location.replace('https://t.me/neinvestor_grafikznaet?start=join');
+    },400);
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/103360033"
-       style="position:absolute; left:-9999px;" alt=""></div></noscript>
+
+  <noscript>
+    <style>body{margin:0;display:flex;align-items:center;justify-content:center;font:16px sans-serif}</style>
+  </noscript>
 </head>
-<body></body>
+
+<body>
+  <noscript>
+    <p><a href="https://t.me/neinvestor_grafikznaet?start=join">
+       Перейти в Telegram</a></p>
+    <img src="https://mc.yandex.ru/watch/103360033" style="position:absolute;left:-9999px" alt="">
+  </noscript>
+</body>
 </html>
+
