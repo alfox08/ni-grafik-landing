@@ -14,8 +14,11 @@
 
     ym(103360033,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true});
 
-    /* хит цели */
-    ym(103360033,'hit','/?goal=join_tg');
+/* хит цели – отправляем ровно 1 раз за сессию */
+if (!sessionStorage.getItem('tg_join_sent')) {
+  ym(103360033, 'hit', '/?goal=join_tg');
+  sessionStorage.setItem('tg_join_sent', '1');
+}
 
     /* редирект через 300-400 мс */
     setTimeout(function(){
